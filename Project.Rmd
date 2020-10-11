@@ -10,7 +10,7 @@ knitr::opts_chunk$set(echo = TRUE)
 # INTRODUCTION
 
 ### PROJECT GOAL: 
-TTTTTTTTTTTTTTTTTEEEEEEEEEEEEEESSSSSSSSSSSSSSSSSSTTTTTTTTTTTT
+
 The project is about statistical comparison of satellite data (NASA-TROPOMI), and model data (GEOS-CF) with respect to NO~2~ concentrations emitted from California wildfires. Since GEOS-CF model works on reactions and equations, the goal of the project is to determine how closely is the model data related with satellite data. 
 
 ### NASA-TROPOMI 
