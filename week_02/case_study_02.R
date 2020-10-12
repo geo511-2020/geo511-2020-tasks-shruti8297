@@ -1,4 +1,4 @@
- #Shruti Jagini 
+#Case study 2 
 #My grandfather says climate is cooling
 
 library(tidyverse)
@@ -7,7 +7,7 @@ data_url <- 'c:/Users/Baloo/Desktop/station.csv'
 temp <- read_csv(data_url, skip=1,na='999.90',
                  col_names = c('YEAR','JAN','FEB','MAR','APR','MAY',
                                'JUN','JUL','AUG','SEP','OCT','NOV','DEC','DJF',
-                               'MAM','JJA','SON','metANN'))
+                               'MAM','JJA','SON'))
 
 plot <- ggplot(temp,aes(YEAR,JJA))+geom_line()+geom_smooth(color='red')
 
