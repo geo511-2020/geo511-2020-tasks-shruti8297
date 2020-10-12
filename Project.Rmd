@@ -38,7 +38,7 @@ In order to have a better understanding on the days where fires were significant
 
 # METHODS
 
-Tool Used  | Description | Package 
+Tools Used  | Description | Package 
 ------------- | -------------| -------------
 Data Conversion | Converting the satellite into a proper form for comparison with the model data | library(lubridate) - Converts into manageable date formats.  
 Data Interpolation | Interpolating the model data at satellite locations for better understanding | interpp() -  point wise interpolates irregular gridded data.
