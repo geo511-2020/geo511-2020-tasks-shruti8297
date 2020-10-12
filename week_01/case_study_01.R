@@ -1,3 +1,4 @@
+#Case study 1 
 data(iris)
 library(ggplot2)
 data("iris")
