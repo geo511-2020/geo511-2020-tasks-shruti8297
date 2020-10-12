@@ -1,7 +1,6 @@
 ---
 title: "Case Study 04"
 author: Shruti Jagini 
-date:   October 1, 2020
 output: github_document
 ---
 
