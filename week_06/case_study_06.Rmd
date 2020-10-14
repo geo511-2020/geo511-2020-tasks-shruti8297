@@ -5,3 +5,4 @@ date: August 1, 2020
 output: github_document
 ---
  
+#case stydy 06
