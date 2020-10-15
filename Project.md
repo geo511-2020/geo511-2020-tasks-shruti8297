@@ -74,7 +74,7 @@ location and time of fires all over the world.
 # PLOTS
 
 ![Distribution of Wildfires in North America in August 2018
-\[3\]](C:\\Users\\shrut\\Downloads\\image.png)
+\[3\]](https://github.com/geo511-2020/geo511-2020-tasks-shruti8297/blob/master/image.png)
 
 # RESULTS
 
@@ -91,5 +91,4 @@ plots, and error analysis plots.
 2.  NASA-GEOS-CF Retrieved from
     <https://gmao.gsfc.nasa.gov/weather_prediction/GEOS-CF/>.
 
-3.  [NASA-WORLD
-    VIEW](https://github.com/geo511-2020/geo511-2020-tasks-shruti8297/blob/master/image.png)
+3.  [NASA-WORLD VIEW](https://worldview.earthdata.nasa.gov/)
