@@ -50,7 +50,7 @@ Statistical Analysis |Using tools like regression models, bias and error calcula
 
 ![Distribution of Wildfires in North America in August 2018 [^a-random-footnote-label3]](C:\\Users\\shrut\\Downloads\\image.png)
 
-[^a-random-footnote-label3]: [NASA-WORLD VIEW](https://worldview.earthdata.nasa.gov/)
+[^a-random-footnote-label3]: [NASA-WORLD VIEW](https://github.com/geo511-2020/geo511-2020-tasks-shruti8297/blob/master/image.png)
 
 # RESULTS 
 
