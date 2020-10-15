@@ -1,11 +1,11 @@
 ---
 title: "Statistical Comparision of NASA-TROPOMI - Satellite and GEOS-CF - Model Data"
 output: github_document
+author: Shruti Jagini 
+date: October 15, 2020
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
+
 
 # INTRODUCTION
 
