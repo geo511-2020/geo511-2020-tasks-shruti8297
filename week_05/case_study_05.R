@@ -1,12 +1,12 @@
 #case study 05 
+
 library(spData)
 library(sf)
 library(tidyverse)
 library(units)
 data(world) 
 data(us_states)
-#plot(world[1]) #this plots the world (iso_a2) 
-#plot(us_states[1]) #this plots the us states according to geoID
+
 
 #finding the crs 
 st_crs(world)
