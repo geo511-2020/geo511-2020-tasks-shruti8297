@@ -3,13 +3,16 @@ library(tidyverse)
 library(ggmap)
 library(rnoaa)
 library(spData)
+
+#world data 
 data(world)
 data(us_states)
 
-#NOAA Data
-dataurl="https://www.ncei.noaa.gov/data/international-best-track-archive-for-climate-stewardship-ibtracs/v04r00/access/shapefile/IBTrACS.NA.list.v04r00.points.zip"
+#loading the url 
+
+data="https://www.ncei.noaa.gov/data/international-best-track-archive-for-climate-stewardship-ibtracs/v04r00/access/shapefile/IBTrACS.NA.list.v04r00.points.zip"
 tdir=tempdir()
-download.file(dataurl,destfile=file.path(tdir,"temp.zip"))
+download.file(url,destfile=file.path(tdir,"temp.zip"))
 unzip(file.path(tdir,"temp.zip"),exdir = tdir)
 list.files(tdir)
 
