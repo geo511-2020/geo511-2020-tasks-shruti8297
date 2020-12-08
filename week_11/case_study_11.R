@@ -35,5 +35,5 @@ fil_1 <-
   }
 mapview(bfil_1, zcol="variable", cex=1, lwd=0)
 
-
+#worked with group 
 
