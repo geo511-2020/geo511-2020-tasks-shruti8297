@@ -1,1 +1,1 @@
-It is quite interesting to see how st_buffer works, also I found the concept of using projects for filtering the data unique. Got to learn a lot from this exercise. 
+I found the usage of st_buffer quite unique, the way that it takes a geometry object and some specified distance and returns a geometry object that is the buffer surrounding the initial object is quite unique, I feel in this method we could filter the area easily in plots based on the distance values. 
