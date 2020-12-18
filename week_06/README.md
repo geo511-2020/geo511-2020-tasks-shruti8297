@@ -1,1 +1,1 @@
-I found the mutate() function quite interesting, this functions helps in changing and managing the data within the dataframe itself. It prevents the loss of original form of dataframe thereby perforning the requiring changes. 
+I liked the scale_fill_virdis function pretty useful, the color scales used in this package are very much capable of representing  data effectively, I also read that these colors are easier to read by those who suffer with colorblindness.  
