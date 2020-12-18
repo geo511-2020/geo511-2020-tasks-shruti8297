@@ -30,13 +30,23 @@ fil <- st_crop(erie, points)
 
 # help from zaque in this section 
 
-fil_1 <- foreach(i = 1:4, .combine = "rbind", .packages = c("sf", "tidyverse")) %dopar% 
-  {race <- levels(fil)[i]
+var <- as.factor(fil$variable)
+
+points <- foreach(i = 1:4, .combine='rbind') %dopar% {
+  races <- levels(var)[i]
   fil %>%
-    filter(variable == race) %>%
+    filter(variable == races) %>%
     st_sample(size = .$value) %>%
     st_as_sf() %>%
-    mutate(variable = race)}
+    mutate(variable = races)
+} 
+
+
+
+
+
+plot <- mapview(points, zcol = "variable", cex = 1, lwd=0) 
+plot
 
 
 
