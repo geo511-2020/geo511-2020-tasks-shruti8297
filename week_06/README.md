@@ -1,1 +1,1 @@
- 
+I found the mutate() function quite interesting, this functions helps in changing and managing the data within the dataframe itself. It prevents the loss of original form of dataframe thereby perforning the requiring changes. 
