@@ -31,23 +31,3 @@ storms <- storm_data %>%
 
 region <- st_bbox(storms)
 
-#Make First Plot
-plot1 <- ggplot(world) + geom_sf() + facet_wrap(~decade) +
-  stat_bin2d(data=storms, aes(y=st_coordinates(storms)[,2], x=st_coordinates(storms)[,1]),bins=100) +
-  scale_fill_distiller(palette="YlOrRd", trans="log", direction=-1, breaks = c(1,10,100,1000)) +
-  coord_sf(ylim=region[c(2,4)], xlim=region[c(1,3)]) + 
-  labs(title = "Storms 1950 - Present", x = element_blank(), y = element_blank())
-print(plot1)
-
-#US States with Most Storms
-transform_us <- st_transform(us_states, crs = st_crs(storms))
-states <- transform_us %>%
-  select(state = NAME)
-storm_states <- st_join(storms, states, join = st_intersects,left = F)
-
-#States with Most Storms Table
-Top_5 <- storm_states %>%
-  group_by(state) %>%
-  summarize(storms=length(unique(NAME))) %>%
-  arrange(desc(storms)) %>%
-  slice(1:5) %>% st_set_geometry(NULL)
