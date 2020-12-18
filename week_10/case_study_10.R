@@ -8,6 +8,9 @@ library(ggmap)
 library(tidyverse)
 library(knitr)
 
+
+# used groups help for performing the task 
+
 # New Packages
 library(ncdf4) # to import data from netcdf format
 
