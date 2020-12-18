@@ -18,3 +18,6 @@ new<- annual %>%
 library(kableExtra)
 kable(head(slice(new, desc(year))), format = "simple",
              align = "c", caption = 'Annual Means for new decade')
+
+
+plot 
