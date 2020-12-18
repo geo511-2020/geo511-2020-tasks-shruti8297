@@ -1,1 +1,1 @@
- 
+It is quite interesting to see how st_buffer works, also I found the concept of using projects for filtering the data unique. Got to learn a lot from this exercise. 

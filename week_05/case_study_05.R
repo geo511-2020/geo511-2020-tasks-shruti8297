@@ -15,6 +15,7 @@ world_filter<-st_transform(world,albers)
 Canada<- world_filter %>%
   filter(name_long=='Canada')
 
+# took insights from the presenters during class presentation and also groups help 
 Buffer<- st_buffer(Canada,dist=10000)
 ggplot(Buffer)+
   geom_sf()
