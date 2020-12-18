@@ -97,6 +97,7 @@ tdates=names(lst)%>%
 names(lst)=1:nlayers(lst)
 lst=setZ(lst,tdates)
 
+# took erik's help with this section  
 # part 1 - Extract time series for a point 
 lw <- SpatialPoints(data.frame(x= -78.791547,y=43.007211))
 projection(lw) = "+proj=longlat"
@@ -140,7 +141,7 @@ plot2 <- left %>%
   filter(landcover%in%c("Urban & built-up","Deciduous Broadleaf forest"))
 
 
-
+plot2
 
 
 
