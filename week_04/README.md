@@ -1,1 +1,1 @@
- 
+I liked the way how left_join function was handy, this could be useful in many cases whenever I would land up in cases such as clubbing data based on certain conditions.  
