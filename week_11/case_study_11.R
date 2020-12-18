@@ -6,12 +6,14 @@ library(doParallel)
 library(dplyr)
 library(sf)
 library(mapview) 
-
+#worked with group  
 
 registerDoParallel(4)
 getDoParWorkers()
 library(tidycensus)
-census_api_key("d6ae3c670a71b562298f31f6a5c775153e90c872", install = TRUE)
+
+
+census_api_key("a83bf6cd5f61481c976b1097d8e3a00a9c497c09", install = TRUE, overwrite=TRUE)
 racevars <- c(White = "P005003", 
               Black = "P005004", 
               Asian = "P005006", 
@@ -26,14 +28,15 @@ points <- c(xmin=-78.9,xmax=-78.85,ymin=42.888,ymax=42.92)
 fil <- st_crop(erie, points)
 
 
-fil_1 <- 
-  foreach(r = unique(fil$variable), .combine='rbind') %dopar% {
-    filter(fil, variable == r) %>%
-      st_sample(size=.$value) %>%
-      st_as_sf() %>%
-      mutate(variable = r)
-  }
-mapview(bfil_1, zcol="variable", cex=1, lwd=0)
+# help from zaque in this section 
 
-#worked with group 
+fil_1 <- foreach(i = 1:4, .combine = "rbind", .packages = c("sf", "tidyverse")) %dopar% 
+  {race <- levels(fil)[i]
+  fil %>%
+    filter(variable == race) %>%
+    st_sample(size = .$value) %>%
+    st_as_sf() %>%
+    mutate(variable = race)}
+
+
 
