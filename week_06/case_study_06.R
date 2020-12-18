@@ -22,6 +22,7 @@ data_1 <- world %>%
 world_1 <- as(data_1, 'Spatial')
 plot(world_1)
 
+# took keenan's help from here 
 
 Temp_1 <- raster::extract(tmean, world_1, fun = max, na.rm = 1, 
                          smal = 1, sp = 1)
@@ -35,4 +36,13 @@ My_plot <- ggplot() + geom_sf(data = Temp_2,
   scale_fill_viridis_c(name="Annual\nMaximum\nTemperature (C)")+theme(legend.position = 'bottom')
 
 
+Results <- Temp_2 %>% group_by(continent) %>%
+  arrange(desc(CRU_Global_1961.1990_Mean_Monthly_Surface_Temperature_Climatology))
 
+table <- Results %>% 
+  top_n(1, CRU_Global_1961.1990_Mean_Monthly_Surface_Temperature_Climatology)
+
+required<-table %>%
+  st_set_geometry(NULL) %>%
+  select('name_long', 'continent', 'CRU_Global_1961.1990_Mean_Monthly_Surface_Temperature_Climatology')
+view(required)
